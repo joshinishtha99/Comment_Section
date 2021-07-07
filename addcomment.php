@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>Contact Us</title>
+    <title>Comment Section</title>
   </head>
   <body>
 <?php
@@ -70,9 +70,9 @@ echo '<hr>';
 
  //Display the rows returned by SQL Query
  while($row = mysqli_fetch_assoc($result)){
-   echo '<div class="mt-1" align="center">
-   <div class="card" style="width: 18rem;">
- <div class="card-body">
+   echo '<div class="container mt-1">
+   <div class="card" align="center" style="width:81rem;">
+ <div class="card-body" align="left">
    <h5 class="card-title">'.$row['fullname'].'</h5>
    <p class="card-text">'.$row['comment']. '</p>
  </div>
@@ -82,6 +82,8 @@ echo '<hr>';
 
  echo '<hr>';
   ?>
+
+  <!-- Form Layout, for adding name and comment -->
   <div class = "container mt-3">
     <h2>Add Comment</h2>
     <form action="/akshat/addcomment.php" method="post">
@@ -98,7 +100,7 @@ echo '<hr>';
   </div>
   <br>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <!-- Bootstrap Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
   </body>
